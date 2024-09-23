@@ -8,40 +8,39 @@
 </head>
 <body>
     <div class="calculator-container">
+        <div class="Bonus" >
+            <div id="clock"></div>
+            <button class="btnCor" id="mode-toggle" onclick="toggleDarkMode()">Modo Escuro</button>
+        </div>
         <div class="display">
             <input type="text" id="display" disabled>
         </div>
         <div class="buttons">
-            <button onclick="appendToDisplay('Math.sqrt(')">√</button>
+            <button onclick="calculateSqrt()">√</button>
             <button onclick="clearDisplay()">C</button>
-            <button style="grid-area: 1 / 3 / 2 / 5;" onclick="clearBack()"><</button>
+            <button onclick="calculatePercentage()">%</button>
+            <button onclick="appendToDisplay('**')">xʸ</button>
+            <button style="grid-area: 1 / 3 / 2 / 5;" onclick="clearBack()">APAGAR</button>
             
             <!-- Scientific operation buttons -->
-            <button onclick="appendToDisplay('Math.sin(')">sin</button>
-            <button onclick="appendToDisplay('Math.cos(')">cos</button>
-            <button onclick="appendToDisplay('Math.tan(')">tan</button>
-            <button onclick="appendToDisplay('Math.log10(')">log</button>
-            <button onclick="appendToDisplay('Math.pow(')">x<sup>y</sup></button>
-            <button onclick="appendToDisplay('Math.exp(')">exp</button>
-            <button onclick="appendToDisplay('Math.abs(')">abs</button>
 
             <!-- Numeric and basic operation buttons -->
-            <button onclick="appendToDisplay('/')">÷</button>
+            <button onclick="appendToDisplay('÷')">÷</button>
+            <button onclick="appendToDisplay('×')">×</button>
             <button onclick="appendToDisplay('7')">7</button>
             <button onclick="appendToDisplay('8')">8</button>
             <button onclick="appendToDisplay('9')">9</button>
-            <button onclick="appendToDisplay('*')">×</button>
+            <button onclick="appendToDisplay('-')">−</button>
             <button onclick="appendToDisplay('4')">4</button>
             <button onclick="appendToDisplay('5')">5</button>
             <button onclick="appendToDisplay('6')">6</button>
-            <button onclick="appendToDisplay('-')">−</button>
+            <button style="grid-area: 4 / 4 / 6 / 5;" onclick="appendToDisplay('+')">+</button>
             <button onclick="appendToDisplay('1')">1</button>
             <button onclick="appendToDisplay('2')">2</button>
             <button onclick="appendToDisplay('3')">3</button>
-            <button style="grid-area: 6 / 4 / 8 / 5;" onclick="appendToDisplay('+')">+</button>
             <button onclick="appendToDisplay('0')">0</button>
             <button onclick="appendToDisplay('.')">.</button>
-            <button onclick="calculate()">=</button>
+            <button style="grid-area: 6 / 3 / 7 / 5;" onclick="calculate()">=</button>
 
         </div>
         <div class="history">
@@ -54,8 +53,6 @@
         </div>
     </div>
 
-    <button class="btnCor" id="mode-toggle" onclick="toggleDarkMode()">Modo Escuro</button>
-    <div id="clock"></div>
     <script src="script.js"></script>
 </body>
 </html>

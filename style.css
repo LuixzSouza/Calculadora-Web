@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #0d0d0d;
     font-family: 'Arial', sans-serif;
@@ -10,17 +14,6 @@ body {
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.btnCor {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-#clock {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
 
 .calculator-container {
     width: 400px;
@@ -30,6 +23,28 @@ body {
     box-shadow: 0px 0px 20px 0px #0affef;
 }
 
+.calculator-container .Bonus {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.btnCor {
+    padding: 15px;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0);
+    color: #0affef;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#clock {
+
+}
+
 .display {
     width: 100%;
     margin-bottom: 20px;
@@ -37,7 +52,7 @@ body {
 }
 
 #display {
-    width: 95%;
+    width: 100%;
     padding: 15px;
     font-size: 24px;
     border: none;
@@ -97,11 +112,21 @@ button:active {
     margin: 0;
     transition: all 0.3s ease;
     color: #0affef;
+    cursor: pointer;
 }
 
 .history .flexBox .clearHistoric:hover {
     margin: 0;
     color: red;
+}
+
+.calculator-container .history span{
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.calculator-container .history span:hover{
+    font-weight: 600;
 }
 
 
@@ -111,13 +136,17 @@ button:active {
 }
 
 .dark-mode {
-    background-color: #333;
+    background-color: #f6f6f6c5;
     color: #0affef;
 }
 
+.dark-mode .calculator-container {
+    background-color: #02020282;
+}
+
 .dark-mode button {
-    background: linear-gradient(145deg, #2a2a2a, #444);
-    box-shadow: 5px 5px 10px #0d0d0d, -5px -5px 10px #3b3b3b;
+    background: linear-gradient(145deg, #6d6d6d, #444);
+    box-shadow: 5px 5px 10px #7f7f7f, -5px -5px 10px #3b3b3b;
     color: #00e6e6;
 }
 
@@ -126,5 +155,4 @@ button:active {
     color: #000;
     box-shadow: 5px 5px 15px #00e6e6, -5px -5px 15px #00e6e6;
 }
-
 
